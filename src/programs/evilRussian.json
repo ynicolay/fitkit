@@ -1,0 +1,68 @@
+{
+    "program": "Evil Russian Pushup Program",
+    "introduction": "The Evil Russian is a 14 day pushup program that will push you to your limits",
+    "rules": ["14 days, number and frequency will change", "No skipping times or days, anywhere, anytime, push-up!"],
+    "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+    "variables": [
+        {
+            "multiplicator": 0.3,
+            "interval": 60
+        },
+        {
+            "multiplicator": 0.5,
+            "interval": 60
+        },
+        {
+            "multiplicator": 0.6,
+            "interval": 45
+        },
+        {
+            "multiplicator": 0.25,
+            "interval": 60
+        },
+        {
+            "multiplicator": 0.45,
+            "interval": 30
+        },
+        {
+            "multiplicator": 0.4,
+            "interval": 60
+        },
+        {
+            "multiplicator": 0.2,
+            "interval": 90
+        },
+        {
+            "multiplicator": 0.35,
+            "interval": 90
+        },
+        {
+            "multiplicator": 0.55,
+            "interval": 20
+        },
+        {
+            "multiplicator": 0.3,
+            "interval": 15
+        },
+        {
+            "multiplicator": 0.65,
+            "interval": 60
+        },
+        {
+            "multiplicator": 0.35,
+            "interval": 45
+        },
+        {
+            "multiplicator": 0.45,
+            "interval": 60
+        },
+        {
+            "multiplicator": 0.25,
+            "interval": 120
+        },
+        {
+            "multiplicator": 1,
+            "interval": 0
+        }
+    ]
+}
