@@ -11,7 +11,11 @@ kit of fitness tools
 - [squat](https://www.exerse.fr/programme-squat.php#:~:text=En%20semaine%201%2C%20il%20vous,%2C%2085%25%20et%2095%25.)
 
 2. ### features
+- menu (header?)
 - pagination (router)
 - url queries
 - info stored in local storage (max)
 - creation of customized routines
+
+3. ### design
+- add style

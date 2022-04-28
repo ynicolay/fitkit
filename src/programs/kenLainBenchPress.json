@@ -1,0 +1,157 @@
+{
+  "program": "Ken Lain's bench press",
+  "introduction": "Hard 10 week program aiming to up your max rep by 10%, put together by Ken Lain, a famous bodybuilder holding the bench press record",
+  "rules": ["Space you low intensity training 3 days after your high intensity training (if monday is high, place the low on tuesday)", "Make sure to follow the weights, do not go astray from the program", "Do not perform other difficult upper-body movements on the high intensity day"],
+  "weeks": 10,
+  "variables": {
+    "high": [
+      {
+        "heavy": {
+          "reps": 1,
+          "multiplicator": 0.98
+        },
+        "series": {
+          "sets": 3,
+          "reps": 10,
+          "multiplicator": 0.55
+        }
+      },
+      {
+        "heavy": {
+          "reps": 1,
+          "multiplicator": 0.99
+        },
+        "series": {
+          "sets": 3,
+          "reps": 9,
+          "multiplicator": 0.6
+        }
+      },
+      {
+        "heavy": {
+          "reps": 1,
+          "multiplicator": 1
+        },
+        "series": {
+          "sets": 3,
+          "reps": 8,
+          "multiplicator": 0.65
+        }
+      },
+      {
+        "heavy": {
+          "reps": 1,
+          "multiplicator": 1.01
+        },
+        "series": {
+          "sets": 3,
+          "reps": 7,
+          "multiplicator": 0.7
+        }
+      },
+      {
+        "heavy": {
+          "reps": 1,
+          "multiplicator": 1.02
+        },
+        "series": {
+          "sets": 3,
+          "reps": 6,
+          "multiplicator": 0.75
+        }
+      },
+      {
+        "heavy": {
+          "reps": 1,
+          "multiplicator": 1.03
+        },
+        "series": {
+          "sets": 3,
+          "reps": 5,
+          "multiplicator": 0.8
+        }
+      },
+      {
+        "heavy": {
+          "reps": 1,
+          "multiplicator": 1.04
+        },
+        "series": {
+          "sets": 2,
+          "reps": 4,
+          "multiplicator": 0.85
+        }
+      },
+      {
+        "heavy": {
+          "reps": 1,
+          "multiplicator": 1.05
+        },
+        "series": {
+          "sets": 2,
+          "reps": 3,
+          "multiplicator": 0.9
+        }
+      },
+      {
+        "heavy": {
+          "reps": 2,
+          "multiplicator": 0.95
+        }
+      },
+      {
+        "heavy": {
+          "reps": 1,
+          "multiplicator": 1.1
+        }
+      }
+    ],
+    "low": [
+      {
+        "sets": 3,
+        "reps": 10,
+        "multiplicator": 0.44
+      },
+      {
+        "sets": 3,
+        "reps": 9,
+        "multiplicator": 0.48
+      },
+      {
+        "sets": 3,
+        "reps": 8,
+        "multiplicator": 0.52
+      },
+      {
+        "sets": 3,
+        "reps": 7,
+        "multiplicator": 0.56
+      },
+      {
+        "sets": 3,
+        "reps": 6,
+        "multiplicator": 0.6
+      },
+      {
+        "sets": 3,
+        "reps": 5,
+        "multiplicator": 0.64
+      },
+      {
+        "sets": 2,
+        "reps": 4,
+        "multiplicator": 0.68
+      },
+      {
+        "sets": 2,
+        "reps": 3,
+        "multiplicator": 0.72
+      },
+      {
+        "sets": 1,
+        "reps": 2,
+        "multiplicator": 0.76
+      }
+    ]
+  }
+}

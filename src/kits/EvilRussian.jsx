@@ -7,21 +7,21 @@ const EvilRussian = () => {
   const [max, setMax] = useState(0);
 	return (
 		<div className='container'>
-			<h1 className='title'>{evilRussian.program}</h1>
+			<h2 className='title'>{evilRussian.program}</h2>
 			<div className='input'>
 				<span>Enter your max : <input onChange={e => setMax(e.target.value)} type="number"></input></span>
 			</div>
 			<div className='introduction'>
-				<h2>Introduction</h2>
+				<h3>Introduction</h3>
 				<p>{evilRussian.introduction}</p>
 			</div>
 			<div className='rules'>
-				<h2>Rules</h2>
+				<h3>Rules</h3>
 				{evilRussian.rules.map((rule, i) => <li key={i}>{rule}</li>)}
 			</div>
 			{max ? (
 				<div className='display'>
-					<h2>Program</h2>
+					<h3>Program</h3>
 					{evilRussian.variables.map((day, i) => {
 						if ((i+1)%7 === 1) {
 							return (
