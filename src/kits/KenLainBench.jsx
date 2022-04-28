@@ -21,7 +21,7 @@ const KenLainBenchPress = () => {
       {max ? (
         <div>
           <h3>Program</h3>
-          <div className='kenLainDisplay' style={{"display": "flex"}}>
+          <div className='kenLainDisplay'>
           <div className='kenLainCol'>
             <h4>Week</h4>
             {kenLainBenchPress.variables.high.map((week, i) => (

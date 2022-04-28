@@ -15,6 +15,15 @@ h3 {
   height: 50px;
   width: 200px;
   border-bottom: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.kenLainDisplay {
+  display: flex;
+  justify-content: center;
 }
 
 .kenLainCol {
@@ -25,3 +34,4 @@ h3 {
 .bold {
   font-weight: bold;
 }
+
