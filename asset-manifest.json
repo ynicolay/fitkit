@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/fitkit/static/css/main.3195cc89.css",
-    "main.js": "/fitkit/static/js/main.cad38bef.js",
+    "main.css": "/fitkit/static/css/main.d28a3b76.css",
+    "main.js": "/fitkit/static/js/main.bfdf60b5.js",
     "static/js/787.8e6b7369.chunk.js": "/fitkit/static/js/787.8e6b7369.chunk.js",
     "index.html": "/fitkit/index.html",
-    "main.3195cc89.css.map": "/fitkit/static/css/main.3195cc89.css.map",
-    "main.cad38bef.js.map": "/fitkit/static/js/main.cad38bef.js.map",
+    "main.d28a3b76.css.map": "/fitkit/static/css/main.d28a3b76.css.map",
+    "main.bfdf60b5.js.map": "/fitkit/static/js/main.bfdf60b5.js.map",
     "787.8e6b7369.chunk.js.map": "/fitkit/static/js/787.8e6b7369.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3195cc89.css",
-    "static/js/main.cad38bef.js"
+    "static/css/main.d28a3b76.css",
+    "static/js/main.bfdf60b5.js"
   ]
 }
