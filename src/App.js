@@ -1,19 +1,27 @@
 import './App.css';
-import { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import EvilRussian from './kits/EvilRussian';
 import KenLainBenchPress from './kits/KenLainBench';
+import Wendlers531 from './kits/531';
+import ComingSoon from './components/ComingSoon';
 
 function App() {
-  const [page, setPage] = useState("evilRussian");
-
   return (
-    <>
+    <Router>
       <div className="App">
-        <button onClick={() => setPage("kenLain")}>Ken Lain Bench press</button>
-        <button onClick={() => setPage("evilRussian")}>Evil Russian pushup challenge</button>
-        {page === "kenLain" ? <KenLainBenchPress /> : <EvilRussian />}
+        <nav>
+          <Link to="/kenLain">Ken Lain Bench Press</Link>
+          <Link to="/evilRussian">Evil Russian Pushup Challenge</Link>
+          <Link to="/531">Jim Wendler's 5/3/1</Link>
+        </nav>
+        <Routes>
+          <Route path="/kenLain" element={<KenLainBenchPress />} />
+          <Route path="/evilRussian" element={<EvilRussian />} />
+          <Route path="/531" element={<ComingSoon />} />
+          <Route path="*" element={<KenLainBenchPress />} />
+        </Routes>
       </div>
-    </>
+    </Router>
   );
 }
 

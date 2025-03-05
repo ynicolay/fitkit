@@ -3,6 +3,10 @@
   font-size: 14px;
 }
 
+.container {
+  margin: 20px;
+}
+
 h2 {
   font-size: 20px;
 }
@@ -11,14 +15,30 @@ h3 {
   font-size: 17px;
 }
 
+h4 {
+  height: 40px;
+  padding: 0 10px;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
 .case {
   height: 50px;
   width: 200px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid grey;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+@media (max-width: 600px) {
+  .case {
+    width: 100%;
+  }
 }
 
 .kenLainDisplay {
@@ -33,5 +53,46 @@ h3 {
 
 .bold {
   font-weight: bold;
+}
+
+/* Style for the navigation bar */
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #333;
+  padding: 1rem;
+}
+
+/* Style for the links in the navigation bar */
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the links */
+nav a:hover {
+  background-color: #575757;
+  border-radius: 5px;
+}
+
+/* Style for the active/current link */
+nav a.active {
+  background-color: #555;
+  border-radius: 5px;
+}
+
+/* Optional: Style for the navigation bar on smaller screens */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav a {
+    width: 100%;
+    text-align: center;
+  }
 }
 

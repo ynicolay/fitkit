@@ -4,12 +4,12 @@ import evilRussian from "../programs/evilRussian.json";
 const calculateSet = (max, multiplier) => Math.round(max * multiplier);
 
 const EvilRussian = () => {
-  const [max, setMax] = useState(0);
+  const [max, setMax] = useState(20);
 	return (
 		<div className='container'>
 			<h2 className='title'>{evilRussian.program}</h2>
 			<div className='input'>
-				<span>Enter your max : <input onChange={e => setMax(e.target.value)} type="number"></input></span>
+				<span>Enter your max : <input onChange={e => setMax(e.target.value)} type="number" placeholder='20'></input></span>
 			</div>
 			<div className='introduction'>
 				<h3>Introduction</h3>

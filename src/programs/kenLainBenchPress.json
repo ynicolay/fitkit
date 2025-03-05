@@ -151,6 +151,11 @@
         "sets": 1,
         "reps": 2,
         "multiplicator": 0.76
+      },
+      {
+        "sets": 1,
+        "reps": 1,
+        "multiplicator": 0.80
       }
     ]
   }

@@ -1,0 +1,9 @@
+{
+    "program": "Jim Wendler's 5/3/1 program",
+    "introduction": "Core principles of strength, battle-tested and confirmed as being timeless.",
+    "rules": ["Start light", "Progress slowly but steadily"],
+    "weeks": 4,
+    "variables": {
+        "sets": []
+    }
+  }

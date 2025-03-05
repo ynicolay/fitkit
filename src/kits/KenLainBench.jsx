@@ -8,7 +8,7 @@ const KenLainBenchPress = () => {
     <div className='container'>
       <h2 className='title'>{kenLainBenchPress.program}</h2>
 			<div className='input'>
-				<span>Enter your max : <input onChange={e => setMax(e.target.value)} type="number"></input></span>
+				<span>Enter your max : <input onChange={e => setMax(e.target.value)} type="number" placeholder={max}></input></span>
 			</div>
       <div className='introduction'>
 				<h3>Introduction</h3>
@@ -25,11 +25,11 @@ const KenLainBenchPress = () => {
           <div className='kenLainCol'>
             <h4>Week</h4>
             {kenLainBenchPress.variables.high.map((week, i) => (
-              <div className='case'>n {i+1}</div>
+              <div className='case'>n°{i+1}</div>
             ))}
           </div>
           <div className='kenLainCol'>
-          <h4>High intensity (monday)</h4>
+          <h4>High intensity (mon)</h4>
             {kenLainBenchPress.variables.high.map(week => (
             <div className='case'>
               <div className='bold'>
@@ -42,7 +42,7 @@ const KenLainBenchPress = () => {
             ))}
           </div>
           <div className='kenLainCol'>
-          <h4>Low intensity (thursday)</h4>
+          <h4>Low intensity (thu)</h4>
             {kenLainBenchPress.variables.low.map(week => (
               <div className='case'>
                 {week.sets}x{week.reps}@{Math.round(max*week.multiplicator)}
