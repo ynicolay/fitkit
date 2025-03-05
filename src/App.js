@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import EvilRussian from './kits/EvilRussian';
 import KenLainBenchPress from './kits/KenLainBench';
 // import Wendlers531 from './kits/531';
@@ -18,7 +18,7 @@ function App() {
           <Route path="/kenLain" element={<KenLainBenchPress />} />
           <Route path="/evilRussian" element={<EvilRussian />} />
           <Route path="/531" element={<ComingSoon />} />
-          <Route path="*" element={<KenLainBenchPress />} />
+          <Route path="/" element={<KenLainBenchPress />} />
         </Routes>
       </div>
     </Router>
