@@ -2,7 +2,7 @@ import './App.css';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import EvilRussian from './kits/EvilRussian';
 import KenLainBenchPress from './kits/KenLainBench';
-import Wendlers531 from './kits/531';
+// import Wendlers531 from './kits/531';
 import ComingSoon from './components/ComingSoon';
 
 function App() {
