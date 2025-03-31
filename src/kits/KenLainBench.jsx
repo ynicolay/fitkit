@@ -1,14 +1,23 @@
-import { useState } from 'react';
-import kenLainBenchPress from "../programs/kenLainBenchPress.json"
+import { useEffect, useState } from 'react';
+import kenLainBenchPress from '../programs/kenLainBenchPress.json'
+import { setItem, getItem } from '../utils/localStorage';
 
 const KenLainBenchPress = () => {
-  const [max, setMax] = useState(100);
+  const [max, setMax] = useState(() => {
+    return getItem('bprm') || 100
+  });
+
+  useEffect(() => {
+    setItem('bprm', max);
+  }, [max])
+
+
 
   return (
     <div className='container'>
       <h2 className='title'>{kenLainBenchPress.program}</h2>
 			<div className='input'>
-				<span>Enter your max : <input onChange={e => setMax(e.target.value)} type="number" placeholder={max}></input></span>
+				<span>Enter your 1RM: <input onChange={e => setMax(e.target.value)} type="number" placeholder={max}></input> KGs</span>
 			</div>
       <div className='introduction'>
 				<h3>Introduction</h3>

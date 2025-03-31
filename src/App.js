@@ -10,7 +10,7 @@ function App() {
     <Router>
       <div className="App">
         <nav>
-          <Link to="/kenLain">Ken Lain Bench Press</Link>
+          <Link to="/kenLain">Ken Lain's Bench Press</Link>
           <Link to="/evilRussian">Evil Russian Pushup Challenge</Link>
           <Link to="/531">Jim Wendler's 5/3/1</Link>
         </nav>

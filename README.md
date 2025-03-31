@@ -16,10 +16,12 @@ Kit of fitness tools, now known as str.quest
 - Dynamic Workout Rendering
 - Coming Soon Page
 - Domain Name (https://str.quest)
+- Bench Press 1RM Persistency in Local Storage
 
 3. ### Design
 - Navigation
 - Mobile Friendly (hopefully)
+- Weight Unit Display (Kilograms)
 
 ## TODO
 1. ### Programs
@@ -30,8 +32,12 @@ Kit of fitness tools, now known as str.quest
 2. ### Features
 - URL Queries
 - Store 1RM in LocalStorage
+- Store Last Visited Route in LocalStorage
 - Customization of routines (Workout days, )
 - 404 Page
+- Collapsible Sections (Introduction, Rules, etc...)
+
+- ?Update packages/React version? (more than 3 years old)
 
 3. ### Design
 - Better Visuals
@@ -41,7 +47,23 @@ Kit of fitness tools, now known as str.quest
 - Text Sanitization
 - Text Coherence (Capitalization, etc...)
 
+## Development
+1. Install [yarn](https://yarnpkg.com/)
+2. Clone project
+3. Run `yarn` when in the root folder of project
+4. Once everything is installed, run `npm start`
+
 ## Deployment
 The Deployment is handled via [react-gh-pages](https://github.com/gitname/react-gh-pages). Follow their guide to deploy.
 
 Otherwise just run `npm run build` to build and deploy.
+
+## Feedback
+- For weight based trainings specify unit (kg/lbs) (DONE)
+- On mobile, when link is 'active' it stays that way. (Implement 'selected training' visual cue on desktop)
+- Prettier embed (SEMI DONE)
+- Input placeholder leads to confusion
+- Bench Press table not readable for newbies
+- Add legend or even verbose mode (3x10@50 will become 3s * 10r @ 50kg where s = sets and r = reps
+OR add verbose mode switch that will display 3 sets of 10 reps at 50kg)
+
