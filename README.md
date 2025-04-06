@@ -16,7 +16,8 @@ Kit of fitness tools, now known as str.quest
 - Dynamic Workout Rendering
 - Coming Soon Page
 - Domain Name (https://str.quest)
-- Bench Press 1RM Persistency in Local Storage
+- Store 1RM & 1 Max Pushup in LocalStorage
+- 404 Page
 
 3. ### Design
 - Navigation
@@ -31,11 +32,10 @@ Kit of fitness tools, now known as str.quest
 
 2. ### Features
 - URL Queries
-- Store 1RM in LocalStorage
 - Store Last Visited Route in LocalStorage
 - Customization of routines (Workout days, )
-- 404 Page
 - Collapsible Sections (Introduction, Rules, etc...)
+- Add localStorage hook
 
 - ?Update packages/React version? (more than 3 years old)
 

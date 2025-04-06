@@ -9,9 +9,7 @@ const KenLainBenchPress = () => {
 
   useEffect(() => {
     setItem('bprm', max);
-  }, [max])
-
-
+  }, [max]);
 
   return (
     <div className='container'>
