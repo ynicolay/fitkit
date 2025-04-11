@@ -1,70 +1,75 @@
-import React, { useState } from 'react';
+import { useEffect, useState } from 'react';
+import jimWendler531 from '../programs/531.json';
+import { setItem, getItem } from '../utils/localStorage';
 
 const Wendlers531 = () => {
-  const [maxRep, setMaxRep] = useState(0);
-// AI SLOP TO REFACTOR
+    const [rms, setRMs] = useState(() => {
+        return getItem('jwrms') || [100, 100, 100, 50]
+    });
 
+    useEffect(() => {
+        setItem('jwrms', rms);
+    }, [rms]);
 
-  const exercises = [
-    {
-      name: "Bench Press",
-      weeks: [
-        { week: 1, sets: [{ set: 1, reps: 5, intensity: 0.65 }, { set: 2, reps: 5, intensity: 0.75 }, { set: 3, reps: "5+", intensity: 0.85 }] },
-        { week: 2, sets: [{ set: 1, reps: 3, intensity: 0.70 }, { set: 2, reps: 3, intensity: 0.80 }, { set: 3, reps: "3+", intensity: 0.90 }] },
-        { week: 3, sets: [{ set: 1, reps: 5, intensity: 0.75 }, { set: 2, reps: 3, intensity: 0.85 }, { set: 3, reps: "1+", intensity: 0.95 }] },
-        { week: 4, sets: [{ set: 1, reps: 5, intensity: 0.40 }, { set: 2, reps: 5, intensity: 0.50 }, { set: 3, reps: 5, intensity: 0.60 }] },
-      ],
-    }
-  ];
+    const updateRMs = (value, index) => {
+        const newRMs = rms.map((rm, i) => {
+            if (i === index) {
+                return value;
+            } else {
+                return rm;
+            }
+        });
+        setRMs(newRMs);
+    };
 
-  const handleMaxRepChange = (event) => {
-    setMaxRep(parseFloat(event.target.value) || 0);
-  };
-
-  const calculateWeight = (intensity) => {
-    return (maxRep * intensity).toFixed(2);
-  };
-
-  return (
-    <div>
-      <input
-        type="number"
-        value={maxRep}
-        onChange={handleMaxRepChange}
-        placeholder="Enter your max rep"
-      />
-      <table>
-        <thead>
-          <tr>
-            <th>Exercise</th>
-            <th>Week</th>
-            <th>Set</th>
-            <th>Reps</th>
-            <th>Weight</th>
-          </tr>
-        </thead>
-        <tbody>
-          {exercises.map((exercise, exerciseIndex) => (
-            <React.Fragment key={exerciseIndex}>
-              {exercise.weeks.map((week, weekIndex) => (
-                <React.Fragment key={weekIndex}>
-                  {week.sets.map((set, setIndex) => (
-                    <tr key={setIndex}>
-                      {setIndex === 0 && <td rowSpan={week.sets.length}>{exercise.name}</td>}
-                      {setIndex === 0 && <td rowSpan={week.sets.length}>{week.week}</td>}
-                      <td>{set.set}</td>
-                      <td>{set.reps}</td>
-                      <td>{calculateWeight(set.intensity)}</td>
-                    </tr>
-                  ))}
-                </React.Fragment>
-              ))}
-            </React.Fragment>
-          ))}
-        </tbody>
-      </table>
-    </div>
-  );
-};
+    return (
+        <div className='container'>
+            <h2 className='title'>{jimWendler531.program}</h2>
+            {jimWendler531.exercices.map((exercice, i) => (
+                <div className='input'>
+                    <span>Enter your {exercice} 1RM: <input onChange={e => updateRMs(e.target.value, i)} type="number" placeholder={rms[i]}></input> KGs</span>
+                </div>
+            ))}
+            <div className='introduction'>
+                <h3>Introduction</h3>
+                <p>{jimWendler531.introduction}</p>
+            </div>
+            <div className='rules'>
+                <h3>Rules</h3>
+                {jimWendler531.rules.map((rule, i) => <li key={i}>{rule}</li>)}
+            </div>
+            {rms ? (
+                <div>
+                    <h3>Program</h3>
+                    <div className='kenLainDisplay'>
+                        <div className='kenLainCol'>
+                            <h4>Week</h4>
+                            {jimWendler531.multiplicators.map((week, i) => (
+                                <div className='case'>n°{i + 1}</div>
+                            ))}
+                        </div>
+                        {jimWendler531.exercices.map((exercice, exerciceIndex) => (
+                            <div className='kenLainCol'>
+                                <h4>{exercice}</h4>
+                                {jimWendler531.multiplicators.map((percentages, multiplicatorsIndex) => (
+                                    <div className='case'>
+                                        {jimWendler531.reps[multiplicatorsIndex] instanceof Array ? 
+                                            percentages.map((percentage, percentageIndex) => (
+                                                <div>{jimWendler531.reps[multiplicatorsIndex][percentageIndex]}@{Math.round(rms[exerciceIndex]*0.9*percentage)}</div>
+                                            )) :
+                                            percentages.map(percentage => (
+                                                <div>{jimWendler531.reps[multiplicatorsIndex]}@{Math.round(rms[exerciceIndex]*0.9*percentage)}</div>
+                                            ))   
+                                        }
+                                    </div>
+                                ))}
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            ) : null}
+        </div>
+    )
+}
 
 export default Wendlers531;

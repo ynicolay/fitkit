@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import kenLainBenchPress from '../programs/kenLainBenchPress.json'
 import { setItem, getItem } from '../utils/localStorage';
+import { CircleCheckBig } from 'lucide-react';
+
 
 const KenLainBenchPress = () => {
   const [max, setMax] = useState(() => {
@@ -10,6 +12,27 @@ const KenLainBenchPress = () => {
   useEffect(() => {
     setItem('bprm', max);
   }, [max]);
+
+  const [progress, setProgress] = useState(() => {
+    return getItem('bpprogress') || [0,0,0,0,0,0,0,0,0,0]
+  });
+
+  useEffect(() => {
+    setItem('bpprogress', progress);
+  }, [progress]);
+
+  const color = "lightgrey";
+
+  let updateProgress = (index) => {
+    const newProgress = progress.map((complete, i) => {
+      if (i === index) {
+        return Math.abs(complete - 1);
+      } else {
+        return complete;
+      }
+    });
+    setProgress(newProgress);
+  };
 
   return (
     <div className='container'>
@@ -54,6 +77,12 @@ const KenLainBenchPress = () => {
               <div className='case'>
                 {week.sets}x{week.reps}@{Math.round(max*week.multiplicator)}
               </div>
+            ))}
+          </div>
+          <div className='kenLainCol'>
+            <h4>Progress</h4>
+            {progress.map((complete, i) => (
+              <div className='case'><CircleCheckBig {...(complete === 0 ? { color } : {})} onClick={e => updateProgress(i)} /></div>
             ))}
           </div>
           </div>
