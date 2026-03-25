@@ -2,7 +2,7 @@
   "name": "fitkit",
   "version": "0.1.2",
   "private": true,
-  "homepage": "http://str.quest",
+  "homepage": "https://ynicolay.github.io/fitkit/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
