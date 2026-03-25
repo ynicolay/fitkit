@@ -56,7 +56,7 @@ Kit of fitness tools, now known as str.quest
 ## Deployment
 The Deployment is handled via [react-gh-pages](https://github.com/gitname/react-gh-pages). Follow their guide to deploy.
 
-Otherwise just run `npm run build` to build and deploy.
+Otherwise just run `npm run deploy` to build and deploy.
 
 ## Feedback
 - For weight based trainings specify unit (kg/lbs) (DONE)
